@@ -16,8 +16,8 @@ if [ "$confirmation" != "vmprep" ]; then
     exit 1
 fi
 
-# Ensure the script is run as root
-if [ "$(id -u)" -ne 0 ]; then
+# Ensure the script is run as root from a tty
+if [ "$(w -sh root |grep tty)" -ne 0 ]; then
     echo "This script must be run as root" >&2
     exit 1
 fi
