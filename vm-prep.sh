@@ -61,7 +61,7 @@ ln -s "$MACHINE_ID_FILE" "$DBUS_MACHINE_ID"
 cloud-init clean
 
 # Disable the Password for root
-passwd -dl root
+passwd -d root
 
 # Clear Shell History
 truncate -s0 ~/.bash_history
